@@ -1,0 +1,26 @@
+<li [ngClass]="{'list-group-item':true, 'list-group-item-danger': post.loveIts < 0, 'list-group-item-success': post.loveIts > 0}">
+  <div class="row">
+    <div class="col-xs-3">
+      <h4  [ngStyle]="{color:getColor()}" >{{post.title}}</h4>
+    </div>
+    <div class="col-xs-7"></div>
+    <div class="col-xs-2 datePart">{{post.createdAt | date: 'dd/MM/yyyy, HH:mm a' | uppercase}}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 contentPart" [ngStyle]="{color:getColor()}">
+      {{post.content}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-1">
+      <div class="btn btn-success" (click)="onClickLove(indexOfPost)">Love it!</div>
+    </div>
+    <div class="col-xs-2">
+      <div class="btn btn-danger" (click)="onClickDontLove(indexOfPost)">Don't love it!</div>
+    </div>
+
+    <div class="col-xs-2 pull-right">
+      <div class="btn btn-danger" (click)="onClickDelete()">Supprimer le post</div>
+    </div>
+  </div>
+</li>

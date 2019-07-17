@@ -1,0 +1,11 @@
+.datePart {
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+  color: gray;
+}
+
+.contentPart {
+  text-align: justify;
+  margin-bottom: 12px;
+}
