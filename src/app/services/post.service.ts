@@ -27,20 +27,9 @@ export class PostService {
     // initialize loveIts values
     this.posts[0].loveIts++;
     this.posts[1].loveIts--;
-    // this.loveIt(0);
-    // this.dontLoveIt(1);
   }
 
-  addPost(title: string, content: string) {
-    const newPost = {
-      title: '',
-      content: '',
-      loveIts: 0,
-      createdAt: new Date(),
-    };
-
-    newPost.title = title;
-    newPost.content = content;
+  addPost(newPost: PostModel) {
 
     this.posts.push(newPost);
     this.emitPostSubject();
