@@ -17,7 +17,7 @@ const appRoute: Routes = [
   {path: 'posts', component: PostsComponent},
   {path: 'new',  component: NewPostComponent},
   {path: 'not-found', component: NotFoundComponent},
-  {path: '', component: PostsComponent},
+  { path : '', redirectTo:  '/posts', pathMatch: 'full'},
   {path: '**', redirectTo: 'not-found'}
 ];
 
